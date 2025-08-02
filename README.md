@@ -9,7 +9,7 @@ Welcome! This repository tracks my daily journey as I learn **Python programming
 
 ## 📝 How I Log My Progress
 
-- **Daily Logs:** Each day, I create a file (e.g., `2025-08-02.md`) summarizing what I learned, practiced, and any challenges faced.
+- **Daily Logs:** Each day, I create a file summarizing what I learned, practiced, and any challenges faced.
 - Logs include:
   - New concepts or syntax learned.
   - Practice problems or topics from DSA.
