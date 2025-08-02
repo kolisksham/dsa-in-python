@@ -1,6 +1,7 @@
 # Python & DSA Daily Progress 🚀
 
 Welcome! This repository tracks my daily journey as I learn **Python programming** and explore **Data Structures & Algorithms (DSA)**.
+I'm doing a **heavy use of AI** to do so, even this file is written and beautified by AI after my prompt.
 
 ## 📅 About This Repo
 
