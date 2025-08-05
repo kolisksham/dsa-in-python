@@ -1,27 +1,3 @@
-#examples
-fruits = ["apple", "banana", "cherry"]
-numbers = [1, 2, 3, 4, 5]
-mixed = [42, "hello", True, 3.14]
-
-#Accessing
-print(fruits[0])   # Output: apple
-print(fruits[2])   # Output: cherry
-
-#Modifying
-fruits[1] = "orange"
-print(fruits)      # Output: ['apple', 'orange', 'cherry']
-
-#Adding
-fruits.append("guava")
-print(fruits)  # ['apple', 'orange', 'cherry', 'guava']
-
-fruits.insert(1, "kiwi")
-print(fruits)  # ['apple', 'kiwi', 'orange', 'cherry', 'guava']
-
-_____________________________________________________________________________________________
-#questions:
-_____________________________________________________________________________________________
-
 #print 1 - 10 
 
 for i in range(1, 11):
@@ -122,6 +98,7 @@ print("_"*100)
 
 sqrs = [i*i for i in range(1,6)]
 print("Squares: ", sqrs)
+
 print("_"*100)
 
 #seperate even and odd
@@ -139,11 +116,15 @@ for i in range(len(nums)):
 print("Odd: ", odd)
 print("Even: ", even)
 
+print("_"*100)
+
 #Capitalize first letter of each word
 sentence = "hello world"
 words = sentence.split()
 for word in words:
     print(word.capitalize())
+
+print("_"*100)
 
 #Replace space with underscore
 text = "learn python fast"
@@ -155,15 +136,21 @@ for ch in text:
         new_text += ch
 print("Updated:", new_text)
 
+print("_"*100)
+
 #Convert list of strings to uppercase
 words = ["apple", "banana", "cherry"]
 for i in range(len(words)):
     words[i] = words[i].upper()
 print("Uppercase:", words)
 
+print("_"*100)
+
 #multiplication table of 5
 for i in range(1, 11):
     print(f"5 x {i} = {5*i}")
+
+print("_"*100)
 
 #Check which items are divisible by 3 and 5
 nums = list(range(1, 31))
@@ -171,8 +158,12 @@ for n in nums:
     if n % 3 == 0 and n % 5 == 0:
         print(n, "is divisible by 3 and 5")
 
+print("_"*100)
+
 #Print only unique characters
 s = "programming"
 for ch in s:
     if s.count(ch) == 1:
         print(ch)
+
+print("_"*100)
