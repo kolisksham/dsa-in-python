@@ -1,169 +1,143 @@
-#print 1 - 10 
-
-for i in range(1, 11):
-    print(i)
-
+# 1-9
+a = [x for x in range(10)]
+print(a)
 print("_"*100)
 
-#^2 of numbers
-
-for i in range(1, 10):
-    print(i, "^ 2 = ", i*i)
-
+# 0-20
+b = [x for x in range(21) if x % 2 == 0]
+print(b)
 print("_"*100)
 
-#sum of all nums 1-20
-
-sum = 0
-for i in range(1, 21):
-    if(i % 2 == 0):
-        sum += i
-    else:
-        continue
-print("Sum of 1-20 is: ", sum)
-
+# square of each nums
+c = [x**2 for x in [1, 2, 3, 4, 5]]
+print(c)
 print("_"*100)
 
-#reverse a string
-
-string = "hello"
-reverse = ""
-
-for c in string:
-    reverse = c+reverse
-print(reverse)
-
+# convert strings to uppercase letter
+d = [s.upper() for s in ["apple", "banana", "cherry"]]
+print(d)
 print("_"*100)
 
-#5
-
-# multiply elements in a list
-
-nums = [1,2,3,4]
-product = 1
-
-for num in nums:
-    product *= num
-
-print("Product: ", product)
-
+# filter +ve numbers
+e = [x for x in [1, -5, 68, -52, -7] if x > 0]
+print(e)
 print("_"*100)
 
-#add 5 to each element of list
-
-nums = [10, 20, 30]
-new_list = []
-
-for num in nums:
-    new_list.append(num + 5)
-print("New List: ", new_list)
-
+# add 5 to each nums
+f = [x + 5 for x in [10, 20, 30]]
+print(f)
 print("_"*100)
 
-#which items are integers
-items = [3, 'a', 4.5, 7, 'b']
+# 7. Multiply elements from two lists (element-wise)
+g = [x * y for x, y in zip([1, 2, 3], [4, 5, 6])]
+print(g)
+print("_"*100) #zip
 
-for i in items:
-    if type(i) == int:
-        print(i, "is integer")
+# 8. Flatten a 2D list
+matrix = [[1, 2], [3, 4], [5, 6]]
+h = [num for row in matrix for num in row]
+print(h)
+print("_"*100) #8 [1, 2, 3, 4, 5, 6]
 
+# replace * with vowels
+text = "hello world"
+i = ['*' if c in 'aeiou' else c for c in text]
+print(i)
 print("_"*100)
 
-#max value
-
-vals = [45, 67, 12, 89, 34, 149]
-
-max_val = vals[0]
-
-for val in vals:
-    if(val > max_val):
-        max_val = val
-print("Max Value: ", max_val)
-
+# extract digit from string
+j = [c for c in 'a1b2c3' if c.isdigit()]
+print(j)
 print("_"*100)
 
-#10
-
-#print index for values
-
-fruits = ['apple', 'banana', 'cherry']
-for i in range(len(fruits)):
-    print(i, "-> ", fruits[i])
-
+#reverse each word
+k = [word[::-1] for word in ["hello", "world"]]
+print(k)
 print("_"*100)
 
-#12 
-
-#list comprehension
-
-sqrs = [i*i for i in range(1,6)]
-print("Squares: ", sqrs)
-
+#(x,y) pairs for 0-2
+l = [(x,y) for x in range(3) for y in range(3)]
+print(l)
 print("_"*100)
 
-#seperate even and odd
+#remove empty str
+m = [s for s in ["str1", "", "str2", "  "] if s]
+print(m) #space holds a value in str
+print("_"*100) 
 
-nums = [i for i in range(1,10)]
-odd = []
-even = []
-
-for i in range(len(nums)):
-    if nums[i] % 2 == 0:
-        even.append(nums[i])
-    else:
-        odd.append(nums[i])
-
-print("Odd: ", odd)
-print("Even: ", even)
-
+#filter strings with length > 3
+n = [s for s in ["hello" , "world", "I'm", "Sam"] if len(s) > 3]
+print(n)
 print("_"*100)
 
-#Capitalize first letter of each word
-sentence = "hello world"
-words = sentence.split()
-for word in words:
-    print(word.capitalize())
-
+#get ascii value of chars
+o = [ord(c) for c in "ABC"]
+print(o)
 print("_"*100)
 
-#Replace space with underscore
-text = "learn python fast"
-new_text = ""
-for ch in text:
-    if ch == " ":
-        new_text += "_"
-    else:
-        new_text += ch
-print("Updated:", new_text)
-
+#filter and square odd nums
+p = [x**2 for x in range(10) if x % 2 != 0]
+print(p)
 print("_"*100)
 
-#Convert list of strings to uppercase
-words = ["apple", "banana", "cherry"]
-for i in range(len(words)):
-    words[i] = words[i].upper()
-print("Uppercase:", words)
-
+#create list of even/odd
+q = ["even" if x % 2 == 0 else "odd" for x in range(10)]
+print(q)
 print("_"*100)
 
-#multiplication table of 5
-for i in range(1, 11):
-    print(f"5 x {i} = {5*i}")
-
+#count chars in each word in list
+words = ["pen", "pineapple", "apple", "pen"]
+r = [len(word) for word in words]
+print(r)
 print("_"*100)
 
-#Check which items are divisible by 3 and 5
-nums = list(range(1, 31))
-for n in nums:
-    if n % 3 == 0 and n % 5 == 0:
-        print(n, "is divisible by 3 and 5")
-
+# replace nums < 0 with 0
+nums = [-7, 5, -9, 22, -5, 73]
+s = [0 for num in nums if num < 0]
+print(s)
 print("_"*100)
 
-#Print only unique characters
-s = "programming"
-for ch in s:
-    if s.count(ch) == 1:
-        print(ch)
-
+#duplicate each element in a list
+arr=[1,2,3]
+t = [x for x in arr for _ in range(2)]
+print(t)
 print("_"*100)
+
+#filter out words starting with "a"
+fruits = ["apple", "banana", "avocado", "cherry"]
+u = [fruit for fruit in fruits if fruit.startswith('a')]
+print(u)
+print("_"*100)
+
+#create list of tuples (x, x^2)
+v = [(x, x**2) for x in range(1, 11)]
+print(v)
+print("_"*100)
+
+#filter out common nums from 2 lists
+l1 = [1, 2, 3, 4]
+l2 = [3, 4, 5, 6]
+w = [x for x in l1 if x in l2]
+print(w)
+print("_"*100)
+
+#create dictionary from 2 lists
+index = [1, 2, 3]
+value = ["a", "b", "c"]
+x = {ind : val for ind, val in zip(index, value)}
+print(x)
+print("_"*100)
+
+#replace None with 0
+l3 = [1, None, 3, 47, None]
+y = [x if x != None in l3 else 0 for x in l3]
+print(y)
+print("_"*100)
+
+#extract unique chars from strings
+z = list({char for char in "programming"})
+print(z)
+print("_"*100)
+
+
+
